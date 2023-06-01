@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/x-icon" href="beach.ico">
+    <title>Miami Hacks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-image: url("bg-img.jpg");
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            color: #fff;
+            text-align: center; /* Center the contact information */
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+        }
+
+        .logo {
+            max-width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .logo img {
+            max-width: 90%;
+            height: auto;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: #1a1a1a;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .navbar a {
+            color: #ff00ff94;
+            text-decoration: none;
+            margin-right: 10px;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                margin: 20px auto;
+                padding: 10px;
+            }
+
+            .logo img {
+                max-width: 90%;
+                height: auto;
+            }
+        }
+
+        h3.footer {
+            color: white;
+            background-color: #1a1a1a;
+        }
+
+        .qr-code {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .qr-code img {
+            width: 200px;
+            height: 200px;
+            animation: borderAnimation 5s infinite;
+        }
+
+        @keyframes borderAnimation {
+            0% {
+                border: 3px solid red;
+            }
+            25% {
+                border: 3px solid green;
+            }
+            50% {
+                border: 3px solid blue;
+            }
+            75% {
+                border: 3px solid yellow;
+            }
+            100% {
+                border: 3px solid red;
+            }
+        }
+
+        .checkout {
+            margin-top: 50px;
+        }
+
+        .text {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        .timer {
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        .bitcoin-address {
+            margin-top: 20px;
+            font-size: 17px;
+            color: #fff;
+            word-break: break-all;
+        }
+
+        p.ylw {
+            color: yellow;
+        }
+
+        .bitcoin-price {
+            margin-top: 20px;
+            font-size: 17px;
+            color: #fff;
+        }
+
+        .loading-dots {
+            position: relative;
+            display: inline-block;
+            margin-left: 5px;
+            margin-right: 5px;
+            color: #fff;
+        }
+        
+        .loading-dots span {
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            margin-right: 3px;
+            background-color: #fff;
+            opacity: 0;
+            animation: loading 1.5s infinite ease-in-out;
+        }
+        
+        @keyframes loading {
+            25% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            75% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .waiting {
+            color: rgb(255, 221, 255);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="miamihacks.png" alt="Logo">
+        </div>
+        <h1>Send Payment</h1>
+        <div class="navbar">
+            <a href="orders.html">My Orders</a>
+            <a href="prod.html">Home</a>
+            <a href="faq.html">FaQ</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="checkout">
+            <hr>
+            <div class="timer">
+                <p id="countdown"></p>
+            </div>
+            <div class="bitcoin-price">
+                <h3>Send <span id="bitcoinPrice"></span> BTC (250$) to:</h3>
+            </div>
+            <div class="qr-code">
+                <img id="qrImage" src="" alt="QR Code">
+            </div>
+            
+            <div class="bitcoin-address">     
+                <p>฿TC address:</p>
+                <p id="address"></p>
+            </div>
+            <hr>
+            <h4 class="waiting">Waiting for payment<span class="loading-dots"><span></span><span></span><span></span></span></h4>
+            <h5>This page will load up automatically after payment is received and confirmed.
+                <br>Please check "My Orders" section for your orders
+            </h5>
+            <hr>
+            <div class="text">
+                <p>Scan the QR code or copy address to complete your purchase</p>
+                <a href="faq.html"><p>How to send Bitcoin?</p></a>
+            </div>
+
+        </div>
+    </div>
+    <center>
+        <h3 class="footer">&copy; 2023 Miami Hacks. All rights reserved.</h3>
+    </center>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {},
+            Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/647646f174285f0ec46e90ce/1h1n0a8cf';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+    <script>
+        // Timer countdown
+        var countdownElement = document.getElementById("countdown");
+        var countdownTime = 30 * 60; // 30 minutes in seconds
+
+        function formatTime(time) {
+            var minutes = Math.floor(time / 60);
+            var seconds = time % 60;
+            return minutes.toString().padStart(2, '0') + ":" + seconds.toString().padStart(2, '0');
+        }
+
+        function updateCountdown() {
+            countdownElement.textContent = formatTime(countdownTime);
+            countdownTime--;
+
+            if (countdownTime < 0) {
+                // Timer has reached 0, perform action here
+                clearInterval(countdownInterval);
+                countdownElement.textContent = "Time's up!";
+            }
+        }
+
+        var countdownInterval = setInterval(updateCountdown, 1000);
+
+        // Display Bitcoin address and QR code
+        function displayBitcoinAddress() {
+            var addresses = [
+                "bc1q52zredxeln20xhr0lqpct7t55q3gkvd2c2l8626h05f5z5y7tzqsry03r7",
+                "bc1qn5zwnqys5d2ggpajptfhn0yhlnc6c5dzz837dy05z0sghp6clmhqu9x8ue",
+                "bc1qm46vzgadgdr8l2e4r2wltdh737cnggmq8ruurp8aa62dmrfzc2eqmgpyjn"
+            ];
+            var qrCodes = ["qrcode.png", "qrcode1.png", "qrcode2.png"];
+            var index = localStorage.getItem("addressIndex");
+            if (index === null) {
+                index = 0;
+            } else {
+                index = parseInt(index);
+                index = (index + 1) % addresses.length;
+            }
+            localStorage.setItem("addressIndex", index.toString());
+            document.getElementById("address").textContent = addresses[index];
+            document.getElementById("qrImage").src = qrCodes[index];
+        }
+
+        displayBitcoinAddress();
+
+        // Bitcoin price update
+        function updateBitcoinPrice() {
+            // Make an API call to fetch the latest Bitcoin price
+            fetch("https://api.coindesk.com/v1/bpi/currentprice/USD.json")
+                .then(response => response.json())
+                .then(data => {
+                    var bitcoinPrice = data.bpi.USD.rate_float;
+                    var equivalentAmount = (250 / bitcoinPrice).toFixed(6); // Calculate the equivalent Bitcoin amount for $110
+                    document.getElementById("bitcoinPrice").textContent = equivalentAmount;
+                })
+                .catch(error => {
+                    console.log("Error fetching Bitcoin price:", error);
+                });
+        }
+
+        updateBitcoinPrice();
+        setInterval(updateBitcoinPrice, 60000); // Update Bitcoin price every minute
+    </script>
+</body>
+</html>

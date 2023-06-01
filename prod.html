@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/x-icon" href="beach.ico">
+  <title>Miami Hacks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      background-image: url("bg-img.jpg");
+      font-weight: 600;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      color: #fff;
+    }
+
+    h1 {
+      text-align: center;
+      color: #fff;
+    }
+
+    .logo {
+      max-width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .logo img {
+      max-width: 90%;
+      height: auto;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      background-color: #1a1a1a;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .navbar a {
+      color: #ff00ff94;
+      text-decoration: none;
+      margin-right: 10px;
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+
+    .navbar a:hover {
+      background-color: #555;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .product-card {
+      background-color: rgba(32, 32, 32, 0.3);
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      text-decoration: none; /* Remove underline from product card */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+
+    .product-card h3 {
+      margin-bottom: 10px;
+      color: #e7e7e7;
+      text-decoration: none; /* Remove underline from product name */
+    }
+
+    .product-card p {
+      color: #666;
+      text-decoration: none; /* Remove underline from product description */
+    }
+
+    .product-card .price {
+      margin-bottom: 10px;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .product-card img {
+      width: 190px;
+      height: 190px;
+      object-fit: cover;
+      border-radius: 0%;
+      margin-bottom: 10px;
+    }
+
+    .product-card button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .product-card button:hover {
+      background-color: #555;
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        margin: 20px auto;
+        padding: 10px;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-card img {
+        width: 45%;
+        height: auto;
+      }
+
+      .logo img {
+        max-width: 90%;
+        height: auto;
+      }
+    }
+
+    h3.footer {
+        color: white;
+        background-color: #1a1a1a;
+    }
+
+    .welcome-back {
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px;
+      color: #fff;
+    }
+
+    .username {
+      margin: 20px auto;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="welcome-back">
+    <div class="username">
+      Welcome back, <span id="username"></span>!
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="logo">
+      <img src="miamihacks.png" alt="Logo">
+    </div>
+    <h1>Products/Services</h1>
+    <div class="navbar">
+      <a href="orders.html">My Orders</a>
+      <a href="prod.html">Home</a>
+      <a href="faq.html">FaQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="product-grid">
+      <a href="snapchat.html" class="product-card">
+        <img src="prod/snaph.png" alt="Product 1">
+        <h3>Snapchat Account Hack</h3>
+        <p>Hack any snapchat account.<br> (1 account)</p>
+        <p class="price">$110</p>
+        <button>Purchase</button>
+      </a>
+      <a href="instagram.html" class="product-card">
+        <img src="prod/instah.png" alt="Product 2">
+        <h3>Instagram Account Hack</h3>
+        <p>Hack any instagram account.<br> (1 account)</p>
+        <p class="price">$110</p>
+        <button>Purchase</button>
+      </a>
+      <a href="whatsapp.html" class="product-card">
+        <img src="prod/whatf.png" alt="Product 3">
+        <h3>Whatsapp Account Hack</h3>
+        <p>Whatsapp account take over<br> with all data.</p>
+        <p class="price">$150</p>
+        <button>Purchase</button>
+      </a>
+      <a href="punisher.html" class="product-card">
+        <img src="prod/puni.png" alt="Product 4">
+        <h3>Punisher IOS/Android RAT</h3>
+        <p>Very strong RAT, control full<br> phone remotely.</p>
+        <p class="price">$250<s> $300</s></p>
+        <button>Purchase</button>
+      </a>
+      <a href="bundle.html" class="product-card">
+        <img src="prod/bundle.png" alt="Product 5">
+        <h3>Bundle Package</h3>
+        <p>3 Snapchat accounts in one<br>pack.</p>
+        <p class="price">$250<s> $330</s></p>
+        <button>Purchase</button>
+      </a>
+      <a href="ddos.html" class="product-card">
+        <img src="prod/wifi.png" alt="Product 6">
+        <h3>DDoS Tool</h3>
+        <p>Kill any wifi with<br> 500.000 rps.</p>
+        <p class="price">$500</p>
+        <button>Purchase</button>
+      </a>
+    </div>
+  </div>
+  <center>
+<h3 class="footer">&copy; 2023 Miami Hacks. All rights reserved.</h3>
+  </center>
+
+  <script>
+    // Retrieve the username from local storage
+    const username = localStorage.getItem('username');
+
+    // Display the username in the appropriate element
+    const usernameElement = document.getElementById('username');
+    usernameElement.textContent = username;
+  </script>
+
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/647646f174285f0ec46e90ce/1h1n0a8cf';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+</body>
+</html>

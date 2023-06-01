@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/x-icon" href="beach.ico">
+  <title>Miami Hacks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      background-image: url("bg-img.jpg");
+      font-weight: 600;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      color: #fff;
+    }
+
+    h1 {
+      text-align: center;
+      color: #fff;
+    }
+
+    .logo {
+      max-width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .logo img {
+      max-width: 90%;
+      height: auto;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      background-color: #1a1a1a;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .navbar a {
+      color: #ff00ff94;
+      text-decoration: none;
+      margin-right: 10px;
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+
+    .navbar a:hover {
+      background-color: #555555;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+    }
+
+    .faq-question {
+      cursor: pointer;
+      text-align: center;
+      background-color: #5555559d;
+      color: #fff;
+      padding: 10px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 10px;
+      background-color: #35353544;
+      border-radius: 6px;
+    }
+
+    .faq-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        margin: 20px auto;
+        padding: 10px;
+      }
+
+      .logo img {
+        max-width: 90%;
+        height: auto;
+      }
+    }
+
+    h3.footer {
+        color: white;
+        background-color: #1a1a1a;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="miamihacks.png" alt="Logo">
+    </div>
+    <h1>Frequently Asked Questions</h1>
+    <div class="navbar">
+      <a href="orders.html">My Orders</a>
+      <a href="prod.html">Home</a>
+      <a href="faq.html">FaQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div id="faq-container">
+      
+      <ul class="faq-list">
+        <li class="faq-item">
+          <h3 class="faq-question" onclick="toggleAnswer(1)">&#10155; How to pay with Crypto?</h3>
+          <p class="faq-answer">There's bunch of ways to pay with cryptocurreny.
+          You can directly buy cryptocurreny from internet or downloading an app.
+        <br>Our recommended apps: Coinbase, Binance, Trust Wallet, BitPay.</p>
+        </li>
+        <li class="faq-item">
+          <h3 class="faq-question" onclick="toggleAnswer(2)">&#10155; How long does the order take?</h3>
+          <p class="faq-answer">Depending on what you buy, products like RAT's will be delivered instantly in "My Orders" section where you will be able to get the product.
+            Snapchat, Instagram etc. can take about 4 hours. If you don't get your order please contact our support.
+          </p>
+        </li>
+        <li class="faq-item">
+          <h3 class="faq-question" onclick="toggleAnswer(3)">&#10155; How to contact us?</h3>
+          <p class="faq-answer">You can always message us on live support on the bottom right corner, or the discord that is in the contacts section.</p>
+        </li>
+        <li class="faq-item">
+          <h3 class="faq-question" onclick="toggleAnswer(4)">&#10155; Will the target know you logged in?</h3>
+          <p class="faq-answer">It really depends on what platform you will be logging in to, but the answer is no. Only
+            if the person changes the password and logs you out then you will lose the account.
+          </p>
+        </li>
+        <li class="faq-item">
+          <h3 class="faq-question" onclick="toggleAnswer(5)">&#10155; Where will I get my order?</h3>
+          <p class="faq-answer">Your order will be displayed in "My Orders" section, all information about prodcut, account
+            will be shown there. Happy hacking!
+          </p>
+        </li>
+        <li class="faq-item">
+          <h3 class="faq-question" onclick="toggleAnswer(6)">&#10155; Cryptocurrency on Cashapp and PayPal?</h3>
+          <p class="faq-answer">Cashapp and PayPal has it's own crypto payments. You can set it up on your app.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <center>
+    <h3 class="footer">&copy; 2023 Miami Hacks. All rights reserved.</h3>
+  </center>
+
+  <script>
+    function toggleAnswer(index) {
+      var answer = document.getElementsByClassName("faq-answer")[index - 1];
+      answer.style.display = (answer.style.display === "none") ? "block" : "none";
+    }
+  </script>
+
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/647646f174285f0ec46e90ce/1h1n0a8cf';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" type="image/x-icon" href="beach.ico">
+  <title>Miami Hacks</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    body {
+      background-color: #272727;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      background-image: url("bg-img.jpg");
+    }
+
+    .container {
+      position: relative;
+    }
+
+    .logo-image {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 250px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="miamihacks.png" alt="Logo" class="logo-image">
+    <h2>Sign Up</h2>
+    <form onsubmit="signup(event)">
+      <label for="username">Username:</label>
+      <input type="text" id="username" required minlength="4">
+      <label for="password">Password:</label>
+      <input type="password" id="password" required minlength="5">
+      <label for="pin">Create 4-number PIN:</label>
+      <input type="text" id="pin" required maxlength="4" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+      <button type="submit">Sign Up</button>
+      <p>Already have an account? <a href="index.html">Log in</a></p>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
