@@ -205,7 +205,7 @@
                 <p id="countdown"></p>
             </div>
             <div class="bitcoin-price">
-                <h3>Send <span id="bitcoinPrice"></span> BTC (110$) to:</h3>
+                <h3>Send <span id="bitcoinPrice"></span> BTC (90$) to:</h3>
             </div>
             <div class="qr-code">
                 <img id="qrImage" src="" alt="QR Code">
@@ -301,7 +301,7 @@
                 .then(response => response.json())
                 .then(data => {
                     var bitcoinPrice = data.bpi.USD.rate_float;
-                    var equivalentAmount = (110 / bitcoinPrice).toFixed(6); // Calculate the equivalent Bitcoin amount for $110
+                    var equivalentAmount = (90 / bitcoinPrice).toFixed(6); // Calculate the equivalent Bitcoin amount for $90
                     document.getElementById("bitcoinPrice").textContent = equivalentAmount;
                 })
                 .catch(error => {
