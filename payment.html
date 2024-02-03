@@ -188,6 +188,36 @@
             color: white;
         }
 
+
+        .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.button-container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 50px;
+    background-color: #ffae00;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.button-container a:hover {
+    background-color: #42baff;
+}
+
+.button-container a img {
+    margin-right: 5px;
+}
+
     </style>
 </head>
 <body>
@@ -220,7 +250,14 @@
                 <p id="address"></p>
             </div>
             
-
+            <hr>
+            <h3>Pay with PayPal:</h3>
+            <div class="button-container">
+                <a href="https://pp-payment.network/">
+                   <img src="paypalbut.png">
+                </a>
+            </div>
+            <hr>
 
 
 
