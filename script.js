@@ -41,7 +41,7 @@ function login(event) {
       localStorage.setItem("username", username);
 
       // Redirect to the welcome page
-      window.location.href = "prod.html";
+      window.location.href = "index.html";
     } else {
       alert("Invalid username or password.");
     }
